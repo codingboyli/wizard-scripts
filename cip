@@ -1,0 +1,6 @@
+#!/bin/bash
+
+IP=`ifconfig | grep 'inet addr' | grep 'Bcast' | grep 'Mask' | awk -F ' ' '{print $2}' | awk -F ':' '{print $2}'`
+echo "$IP" | xclip 
+echo "$IP" | xclip -selection clipboard
+

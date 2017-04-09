@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp -fr ~/working/softwares/apache-maven-3.2.3/conf/settings.xml.office ~/working/softwares/apache-maven-3.2.3/conf/settings.xml

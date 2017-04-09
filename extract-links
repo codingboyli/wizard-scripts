@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $# < 1 ]]; then 
+  echo "Example: $0 http://www.aixia.cc/html/981.html"
+  exit
+fi 
+
+wget -qO- "$1" | grep 'copyUrl' | awk -F"'" '{print $2}' | pbcopy
+
+echo "Links are copied to system clipboard. Please open Thunder, then File -> New Task. Paste the links in the task window and click OK button." 
+
+
